@@ -1,14 +1,14 @@
 namespace Garage
 {
-    public class Ram : Vehicle  // Gas powered truck
+    public class Ram : Vehicle, IGasVehicle  // Gas powered truck
     {
-        public double FuelCapacity { get; set; }
-        // public string MainColor { get; set; }
-        // public int MaximumOccupancy { get; set; }
-
+        // public double FuelCapacity { get; set; }
+        public string CurrentTankPercentage { get; set; } = default!;
         public void RefuelTank()
         {
             // method definition omitted
+            CurrentTankPercentage = "100";
+            Console.WriteLine($"Tank is full and back to {CurrentTankPercentage}%");
         }
                 public override void Drive()
         {

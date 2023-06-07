@@ -1,12 +1,14 @@
 namespace Garage
 {
-    public class Tesla : Vehicle
+    public class Tesla : Vehicle, IElectricalVehicle
     {
         public double BatteryKWh { get; set; }
-
+        public string CurrentChargePercentage { get; set;} = default!;
         public void ChargeBattery()
         {
             // method definition omitted
+            CurrentChargePercentage = "100";
+            Console.WriteLine($"Charge is back to {CurrentChargePercentage}%");
         }
 
                 public override void Drive()

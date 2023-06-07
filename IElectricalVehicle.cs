@@ -1,6 +1,8 @@
-// public interface IElectricalVehicle
-// {
-//     void Drive();
-//     void Turn();
-//     void Stop();
-// }
+
+
+public interface IElectricalVehicle
+{
+    string CurrentChargePercentage { get; set; }
+
+    void ChargeBattery();
+}

@@ -2,7 +2,7 @@ namespace Garage
 {
     public class Vehicle
     {
-        public string MainColor { get; set; }
+        public string MainColor { get; set; } = default!;
         public int MaximumOccupancy { get; set; }
 
         public virtual void Drive()
